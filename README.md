@@ -1,3 +1,3 @@
 # calculator
 Hello there 
-welocme to my calculator
+welcome to my calculator
