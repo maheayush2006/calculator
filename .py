@@ -1,25 +1,23 @@
-print("CALCULATOR")
-print("Enter first number")
-a = int(input())
-print("Enter second number")
-b = int(input())
-print("Which tast do you want to perform?")
-print("add!\nsubtraction!\nmultiplication!\ndivision!\nremainder!")
-c = input()
-if c == "add":
-    print(a + b)
-elif c == "subtraction":
-    if a > b:
-        print(a - b)
-    elif b > a:
-        print(b - a)
-    elif a == b:
-        print("0")
-elif c == "multiplication":
-    print(a * b)
-elif c == "division":
-    print(a/b)
-elif c == "remainder":
-    print(a%b)
-else:
-    print("invalid instruction!!!!!123")   
+numbers = list(map(float, input("Enter numbers separated by spaces: ").split()))
+
+operation = input("Choose operation (+, -, *, /): ")
+
+result = numbers[0]
+
+for num in numbers[1:]:
+    if operation == "+":
+        result += num
+    elif operation == "-":
+        result -= num
+    elif operation == "*":
+        result *= num
+    elif operation == "/":
+        if num == 0:
+            print("Error: Division by zero")
+            exit()
+        result /= num
+    else:
+        print("Invalid operation")
+        exit()
+
+print("Result:", result)
