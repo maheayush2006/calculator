@@ -21,4 +21,3 @@ for num in numbers[1:]:
         exit()
 
 print("Result:", result)
-1
